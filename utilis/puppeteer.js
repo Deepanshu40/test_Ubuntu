@@ -18,7 +18,11 @@ module.exports.puppeteerSession = async () => {
             console.log("HTML content:", htmlContent);
             console.log('navigating changes');
             await page.locator('a').click();
-            const currentUrl = page.url();
+            await page.locator('button').click();
+            await page.locator('a[href="https://www.tdscpc.gov.in/app/login.xhtml?usr=Ded"]').click();
+            await page.waitForSelector('#userId');
+
+            
             console.log("Current URL:", currentUrl);
             console.log("HTML content:", htmlContent);
         
