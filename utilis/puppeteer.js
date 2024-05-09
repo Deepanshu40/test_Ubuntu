@@ -11,7 +11,7 @@ module.exports.puppeteerSession = async () => {
         });
             const page = await browserInstance.newPage();
             // await page.goto('https://www.tdscpc.gov.in/app/ded/panverify.xhtml', { waitUntil: 'networkidle0' });
-            await page.goto(https://www.tdscpc.gov.in/en/home.html', { waitUntil: 'networkidle0' });
+            await page.goto('https://www.tdscpc.gov.in/en/home.html', { waitUntil: 'networkidle0' });
             let htmlContent = await page.content();
             let currentUrl = page.url();
             console.log("Current URL:", currentUrl);
