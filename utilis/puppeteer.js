@@ -18,7 +18,9 @@ module.exports.puppeteerSession = async () => {
             console.log("HTML content:", htmlContent);
             console.log('navigating changes');
             await page.locator('a').click();
+        console.log('clicked ok');
             await page.locator('button').click();
+console.log('clicked ok');        
             await page.locator('a[href="https://www.tdscpc.gov.in/app/login.xhtml?usr=Ded"]').click();
             await page.waitForSelector('#userId');
 
