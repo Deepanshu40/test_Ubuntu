@@ -6,27 +6,27 @@ module.exports.puppeteerSession = async () => {
     try {
         const browserInstance = await puppeteer.launch({
             headless:true,
-            // executablePath: path.join(__dirname, '..', '.cache', 'puppeteer', 'chrome-headless-shell', 'linux-124.0.6367.91', 'chrome-headless-shell-linux64', 'chrome-headless-shell'),
-            executablePath: path.join(__dirname, '..', '.cache', 'puppeteer', 'chrome', 'linux-124.0.6367.91', 'chrome-linux64', 'chrome'),
+            executablePath: path.join(__dirname, '..', '.cache', 'puppeteer', 'chrome-headless-shell', 'linux-124.0.6367.91', 'chrome-headless-shell-linux64', 'chrome-headless-shell'),
+            // executablePath: path.join(__dirname, '..', '.cache', 'puppeteer', 'chrome', 'linux-124.0.6367.91', 'chrome-linux64', 'chrome'),
         });
-        const page = await browserInstance.newPage();
+            const page = await browserInstance.newPage();
             // await page.goto('https://www.tdscpc.gov.in/app/ded/panverify.xhtml', { waitUntil: 'networkidle0' });
-            await page.goto('https://www.tdscpc.gov.in/app/login.xhtml?usr=Ded', { waitUntil: 'networkidle0' });
-            const htmlContent = await page.content();
-            const currentUrl = page.url();
+            await page.goto(https://www.tdscpc.gov.in/en/home.html', { waitUntil: 'networkidle0' });
+            let htmlContent = await page.content();
+            let currentUrl = page.url();
             console.log("Current URL:", currentUrl);
             console.log("HTML content:", htmlContent);
-            console.log('navigating changes');
-            await page.locator('a').click();
-        console.log('clicked ok');
-            await page.locator('button').click();
-console.log('clicked ok');        
-            await page.locator('a[href="https://www.tdscpc.gov.in/app/login.xhtml?usr=Ded"]').click();
-            await page.waitForSelector('#userId');
+//             console.log('navigating changes');
+//             await page.locator('a').click();
+//         console.log('clicked ok');
+//             await page.locator('button').click();
+// console.log('clicked ok');        
+//             await page.locator('a[href="https://www.tdscpc.gov.in/app/login.xhtml?usr=Ded"]').click();
+//             await page.waitForSelector('#userId');
 
             
-            console.log("Current URL:", currentUrl);
-            console.log("HTML content:", htmlContent);
+//             console.log("Current URL:", currentUrl);
+//             console.log("HTML content:", htmlContent);
         
     //         await page.waitForSelector('#userId');
     //         await page.type('#userId', 'HRDARCLTAN');
