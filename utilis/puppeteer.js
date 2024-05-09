@@ -9,7 +9,8 @@ module.exports.puppeteerSession = async () => {
             executablePath: path.join(__dirname, '..', '.cache', 'puppeteer', 'chrome-headless-shell', 'linux-124.0.6367.91', 'chrome-headless-shell-linux64', 'chrome-headless-shell'),
         });
         const page = await browserInstance.newPage();
-            await page.goto('https://www.tdscpc.gov.in/app/ded/panverify.xhtml', { waitUntil: 'networkidle0' });
+            // await page.goto('https://www.tdscpc.gov.in/app/ded/panverify.xhtml', { waitUntil: 'networkidle0' });
+            await page.goto('https://www.tdscpc.gov.in/app/login.xhtml?usr=Ded', { waitUntil: 'networkidle0' });
             const htmlContent = await page.content();
             const currentUrl = page.url();
             console.log("Current URL:", currentUrl);
