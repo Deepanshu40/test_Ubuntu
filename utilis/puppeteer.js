@@ -2,11 +2,12 @@ const path = require('path');
 const puppeteer = require('puppeteer'); 
 
 module.exports.puppeteerSession = async () => {
-    
+    // /home/dgarg40/test_Ubuntu/.cache/puppeteer/chrome/linux-124.0.6367.91/chrome-linux64/chrome
     try {
         const browserInstance = await puppeteer.launch({
             headless:true,
-            executablePath: path.join(__dirname, '..', '.cache', 'puppeteer', 'chrome-headless-shell', 'linux-124.0.6367.91', 'chrome-headless-shell-linux64', 'chrome-headless-shell'),
+            // executablePath: path.join(__dirname, '..', '.cache', 'puppeteer', 'chrome-headless-shell', 'linux-124.0.6367.91', 'chrome-headless-shell-linux64', 'chrome-headless-shell'),
+            executablePath: path.join(__dirname, '..', '.cache', 'puppeteer', 'chrome', 'linux-124.0.6367.91', 'chrome-linux64', 'chrome'),
         });
         const page = await browserInstance.newPage();
             // await page.goto('https://www.tdscpc.gov.in/app/ded/panverify.xhtml', { waitUntil: 'networkidle0' });
