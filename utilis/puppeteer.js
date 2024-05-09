@@ -16,6 +16,11 @@ module.exports.puppeteerSession = async () => {
             const currentUrl = page.url();
             console.log("Current URL:", currentUrl);
             console.log("HTML content:", htmlContent);
+            console.log('navigating changes');
+            await page.locator('a').click();
+            const currentUrl = page.url();
+            console.log("Current URL:", currentUrl);
+            console.log("HTML content:", htmlContent);
         
     //         await page.waitForSelector('#userId');
     //         await page.type('#userId', 'HRDARCLTAN');
