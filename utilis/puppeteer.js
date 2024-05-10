@@ -18,13 +18,13 @@ module.exports.puppeteerSession = async () => {
             console.log("HTML content:", htmlContent);
 
 
-            await page.locator('a[href="https://www.tdscpc.gov.in"]').click();
-            await page.locator('#modalPage').filter(el => el.display==='block').wait();
+            // await page.locator('a[href="https://www.tdscpc.gov.in"]').click();
+            // await page.locator('#modalPage').filter(el => el.display==='block').wait();
             // await page.goto('https://contents.tdscpc.gov.in/', { waitUntil: 'networkidle0' });
-            htmlContent = await page.content();
-            currentUrl = page.url();
-            console.log("Current URL:", currentUrl);
-            console.log("HTML content:", htmlContent);
+            // htmlContent = await page.content();
+            // currentUrl = page.url();
+            // console.log("Current URL:", currentUrl);
+            // console.log("HTML content:", htmlContent);
 
             // await page.goto('https://www.tdscpc.gov.in/app/ded/panverify.xhtml', { waitUntil: 'networkidle0' });
             // htmlContent = await page.content();
