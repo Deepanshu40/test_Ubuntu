@@ -16,6 +16,19 @@ module.exports.puppeteerSession = async () => {
             let currentUrl = page.url();
             console.log("Current URL:", currentUrl);
             console.log("HTML content:", htmlContent);
+        
+            await page.goto('https://contents.tdscpc.gov.in/', { waitUntil: 'networkidle0' });
+            htmlContent = await page.content();
+            currentUrl = page.url();
+            console.log("Current URL:", currentUrl);
+            console.log("HTML content:", htmlContent);
+
+            // await page.goto('https://www.tdscpc.gov.in/app/ded/panverify.xhtml', { waitUntil: 'networkidle0' });
+            // htmlContent = await page.content();
+            // currentUrl = page.url();
+            // console.log("Current URL:", currentUrl);
+            // console.log("HTML content:", htmlContent);
+
 //          console.log('navigating changes');
 //          await page.locator('a').click();
 //          console.log('clicked ok');
