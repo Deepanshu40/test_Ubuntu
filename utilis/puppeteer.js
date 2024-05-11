@@ -8,6 +8,7 @@ module.exports.puppeteerSession = async () => {
             headless:true,
             executablePath: path.join(__dirname, '..', '.cache', 'puppeteer', 'chrome-headless-shell', 'linux-124.0.6367.91', 'chrome-headless-shell-linux64', 'chrome-headless-shell'),
             // executablePath: path.join(__dirname, '..', '.cache', 'puppeteer', 'chrome', 'linux-124.0.6367.91', 'chrome-linux64', 'chrome'),
+             args: ['--no-sandbox', '--disable-setuid-sandbox']
         });
             const page = await browserInstance.newPage();
             // await page.goto('https://www.tdscpc.gov.in/app/ded/panverify.xhtml', { waitUntil: 'networkidle0' });
