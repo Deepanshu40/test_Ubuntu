@@ -6,7 +6,7 @@ const cors = require('cors');
 
 app.use(cors({}));
 
-puppeteerSession();
+// puppeteerSession();
 
 app.get('/', (req, res) => {
     res.send('request accepted')
