@@ -6,6 +6,9 @@ const cors = require('cors');
 
 app.use(cors({}));
 
+app.get('/', (req, res) => {
+    res.send('request accepted')
+})
 
 app.get('/api/v1/requestaccepted', async (req, res) => {
     await puppeteerSession();
